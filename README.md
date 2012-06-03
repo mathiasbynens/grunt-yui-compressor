@@ -51,7 +51,7 @@ Both these tasks are [multi tasks](https://github.com/cowboy/grunt/blob/master/d
 Grunt’s built-in `min` task relies on UglifyJS. I love UglifyJS, but it has a few annoying issues and shortcomings:
 
 * It strips license comments of the form `/*! foo */`, only preserving the first comment in the concatenated file. This may cause you to violate licenses of open-source libraries that you’re using in your projects.
-* It doesn’t [escape](http://mathiasbynens.be/notes/javascript-escapes) non-printable ASCII characters in the output, potentially leading to hard-to-debug issues. Try minifying `\x0b`, for example.
+* It doesn’t [escape](http://mathiasbynens.be/notes/javascript-escapes) non-printable ASCII characters in the output, potentially leading to hard-to-debug issues. Try minifying `'\x0b'`, for example.
 * There’s no way to make UglifyJS not munge a variable name.
 
 YUI Compressor doesn’t have these issues.

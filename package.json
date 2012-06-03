@@ -18,7 +18,11 @@
 	"licenses": [
 		{
 			"type": "MIT",
-			"url": "https://github.com/mathiasbynens/grunt-yui-compressor/blob/master/LICENSE-MIT"
+			"url": "http://mths.be/mit"
+		},
+		{
+			"type": "GPL",
+			"url": "http://mths.be/gpl"
 		}
 	],
 	"main": "grunt.js",
