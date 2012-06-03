@@ -3,10 +3,13 @@ module.exports = function(grunt) {
 	var Compressor = require('node-minify').minify;
 
 	grunt.registerHelper('yui-compressor', function(options) {
-		var source = options.source,
+		var source = grunt.file.expandFiles(options.source),
 		    destination = options.destination,
 		    max = grunt.helper('concat', source),
 		    min;
+		// Ugly hack to create the destination path automatically if needed
+		grunt.file.write(destination, '');
+		// Minify all the things!
 		new Compressor({
 			'type': 'yui-' + options.type,
 			'fileIn': source,
@@ -26,24 +29,19 @@ module.exports = function(grunt) {
 	});
 
 	grunt.registerMultiTask('min', 'Minify JavaScript files with YUI Compressor.', function() {
-		var done = this.async(),
-		    source = grunt.file.expandFiles(this.file.src),
-		    destination = this.file.dest;
 		grunt.helper('yui-compressor', {
 			'type': 'js',
-			'source': source,
-			'destination': destination,
+			'source': this.file.src,
+			'destination': this.file.dest,
 			'fn': this.async()
 		});
 	});
 
 	grunt.registerMultiTask('cssmin', 'Minify CSS files with YUI Compressor.', function() {
-		var source = grunt.file.expandFiles(this.file.src),
-		    destination = this.file.dest;
 		grunt.helper('yui-compressor', {
 			'type': 'css',
-			'source': source,
-			'destination': destination,
+			'source': this.file.src,
+			'destination': this.file.dest,
 			'fn': this.async()
 		});
 	});

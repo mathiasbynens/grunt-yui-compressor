@@ -56,6 +56,11 @@ Grunt’s built-in `min` task relies on UglifyJS. I love UglifyJS, but it has a 
 
 YUI Compressor doesn’t have these issues.
 
+## Release History
+
+* v0.1.1: Create the destination path automatically if needed
+* v0.1.0: Initial release
+
 ## Contributing
 
 Feel free to fork if you see possible improvements!
