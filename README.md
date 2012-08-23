@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/mathiasbynens/grunt-yui-compressor.png)](http://travis-ci.org/mathiasbynens/grunt-yui-compressor)
 # grunt-yui-compressor
 
 A [grunt](https://github.com/cowboy/grunt) plugin for compressing JavaScript and CSS files using YUI Compressor.
