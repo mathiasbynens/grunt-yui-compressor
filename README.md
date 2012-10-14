@@ -33,7 +33,7 @@ Now you can specify CSS/JS files to minify. Here’s a basic example:
 }
 ```
 
-Both `min` and `cssmin` use the same API as [the built-in `min` task](https://github.com/cowboy/grunt/blob/master/docs/task_min.md#usage-examples).
+Both `min` and `cssmin` use the same API as [the built-in `min` task](https://github.com/gruntjs/grunt/blob/master/docs/task_min.md#usage-examples).
 
 ## Documentation
 
@@ -42,7 +42,7 @@ This plugin does two things:
 * It overrides grunt’s built-in `min` task, and makes it use YUI Compressor instead of UglifyJS.
 * It provides a `cssmin` task that uses YUI Compressor to compress CSS files.
 
-Both these tasks are [multi tasks](https://github.com/cowboy/grunt/blob/master/docs/types_of_tasks.md#multi-tasks), meaning that each of them will implicitly iterate over all of its targets if no target is specified.
+Both these tasks are [multi tasks](https://github.com/gruntjs/grunt/blob/master/docs/types_of_tasks.md#multi-tasks), meaning that each of them will implicitly iterate over all of its targets if no target is specified.
 
 ## FAQ
 
