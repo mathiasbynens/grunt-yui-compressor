@@ -4,9 +4,17 @@ module.exports = function(grunt) {
 
 	grunt.registerHelper('yui-compressor', function(options) {
 		var source = grunt.file.expandFiles(options.source),
-		    destination = options.destination,
-		    max = grunt.helper('concat', source),
-		    min;
+			destination = options.destination,
+			max = grunt.helper('concat', source),
+			min,
+			banner = grunt.task.directive(source[0], function() { return null; });
+
+		if (banner === null) {
+			banner = '';
+		} else {
+			source.shift();
+		}
+
 		// Ugly hack to create the destination path automatically if needed
 		grunt.file.write(destination, '');
 		// Minify all the things!
@@ -19,7 +27,8 @@ module.exports = function(grunt) {
 					grunt.warn(error);
 					return options.fn();
 				}
-				min = grunt.file.read(destination);
+				min = banner + grunt.file.read(destination);
+				grunt.file.write(destination, min);
 				grunt.log.writeln('File `' + destination + '` created.');
 				grunt.helper('min_max_info', min, max);
 				// Let grunt know the asynchronous task has completed
