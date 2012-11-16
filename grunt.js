@@ -1,9 +1,17 @@
 module.exports = function(grunt) {
 
 	grunt.initConfig({
+		'meta': {
+			'banner': '/*!       \n'+
+					  ' *  Banner\n'+
+					  ' */       \n'
+		},
 		'min': {
 			'dist': {
-				'src': 'examples/example.js',
+				'src': [
+					'<banner>',
+					'examples/example.js'
+				],
 				'dest': 'examples/example.min.js'
 			}
 		},
