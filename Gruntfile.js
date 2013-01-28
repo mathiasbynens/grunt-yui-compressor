@@ -14,7 +14,7 @@ module.exports = function(grunt) {
 			}
 		},
 		'lint': {
-			'files': ['grunt.js', 'tasks/yui-compressor.js']
+			'files': ['gruntFile.js', 'tasks/*.js', 'tasks/lib/*.js']
 		},
 		'watch': {
 			'files': '<config:lint.files>',
@@ -34,13 +34,18 @@ module.exports = function(grunt) {
 				'es5': true,
 				'trailing': true,
 				'smarttabs': true
-			},
-			'globals': {}
+			}
 		}
 	});
 
+	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks('grunt-contrib-watch');
+
 	grunt.loadTasks('tasks');
 
-	grunt.registerTask('default', 'lint min cssmin');
+	grunt.registerTask('default', [
+		'min',
+		'cssmin'
+	]);
 
 };

@@ -25,7 +25,6 @@
 			"url": "http://mths.be/gpl"
 		}
 	],
-	"main": "grunt.js",
 	"bin": "bin/grunt-yui-compressor",
 	"engines": {
 		"node": "*"
@@ -34,11 +33,13 @@
 		"test": "grunt test"
 	},
 	"dependencies": {
-		"grunt": "~0.3.8",
+		"grunt": "~0.4.0",
+		"grunt-lib-contrib": "~0.5.2",
 		"node-minify": "~0.3.10"
 	},
 	"devDependencies": {
-		"grunt": "~0.3.8"
+		"grunt-contrib-jshint": "~0.1.1",
+		"grunt-contrib-watch": "~0.1.4"
 	},
 	"keywords": [
 		"gruntplugin"
