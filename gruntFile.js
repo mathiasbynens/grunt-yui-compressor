@@ -1,3 +1,5 @@
+"use strict";
+
 module.exports = function(grunt) {
 
 	grunt.initConfig({
@@ -13,14 +15,16 @@ module.exports = function(grunt) {
 				'dest': 'examples/example.min.css'
 			}
 		},
-		'lint': {
-			'files': ['grunt.js', 'tasks/yui-compressor.js']
-		},
 		'watch': {
-			'files': '<config:lint.files>',
+			'files': '<%= jshint.dev.files.src %>',
 			'tasks': 'default'
 		},
 		'jshint': {
+			'dev': {
+				files: {
+					src: ['gruntFile.js', 'tasks/*.js', 'tasks/lib/*.js']
+				}
+			},
 			'options': {
 				'curly': true,
 				'immed': true,
@@ -34,13 +38,14 @@ module.exports = function(grunt) {
 				'es5': true,
 				'trailing': true,
 				'smarttabs': true
-			},
-			'globals': {}
+			}
 		}
 	});
 
+	grunt.loadNpmTasks("grunt-contrib-jshint");
+	grunt.loadNpmTasks("grunt-contrib-watch");
+
 	grunt.loadTasks('tasks');
 
-	grunt.registerTask('default', 'lint min cssmin');
-
+	grunt.registerTask('default', ['jshint:dev', 'min', 'cssmin']);
 };
