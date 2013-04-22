@@ -14,9 +14,10 @@ exports.init = function(grunt) {
 
 	return function(options) {
 		var source = grunt.file.expand(options.source),
-		    destination = options.destination,
-		    max = concat(source),
-		    min;
+			destination = options.destination,
+			max = concat(source),
+			min,
+			report = options.report;
 
 		// Ugly hack to create the destination path automatically if needed
 		grunt.file.write(destination, '');
@@ -33,7 +34,7 @@ exports.init = function(grunt) {
 				}
 				min = grunt.file.read(destination);
 				grunt.log.writeln('File `' + destination + '` created.');
-				minMax(min, max, 'gzip');
+				minMax(min, max, report);
 				// Let Grunt know the asynchronous task has completed
 				options.fn();
 			}

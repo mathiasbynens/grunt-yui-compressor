@@ -9,8 +9,13 @@ module.exports = function(grunt) {
 		},
 		'cssmin': {
 			'dist': {
-				'src': 'examples/example.css',
-				'dest': 'examples/example.min.css'
+				'options': {
+					'report': false
+				},
+				'files': [{
+					'src': 'examples/example.css',
+					'dest': 'examples/example.min.css'
+				}]
 			}
 		},
 		'lint': {
