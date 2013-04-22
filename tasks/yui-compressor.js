@@ -7,6 +7,9 @@ module.exports = function(grunt) {
 		var files = this.files;
 		var length = files.length;
 		var count = 0;
+	var options = this.options({
+		report: 'gzip'
+	});
 		files.forEach(function(file) {
 			yuiCompressor({
 				'type': 'js',
@@ -16,7 +19,8 @@ module.exports = function(grunt) {
 					if (++count == length) {
 						done();
 					}
-				}
+				},
+				'report' : options.report
 			});
 		});
 	});
@@ -26,6 +30,9 @@ module.exports = function(grunt) {
 		var files = this.files;
 		var length = files.length;
 		var count = 0;
+	var options = this.options({
+		report: 'gzip'
+	});
 		files.forEach(function(file) {
 			yuiCompressor({
 				'type': 'css',
@@ -35,7 +42,8 @@ module.exports = function(grunt) {
 					if (++count == length) {
 						done();
 					}
-				}
+				},
+				'report' : options.report
 			});
 		});
 	});
