@@ -67,7 +67,7 @@ Feel free to fork if you see possible improvements!
 
 In lieu of a formal style guide, take care to maintain the existing coding style. Please lint your code (by simply running `grunt`) before submitting a patch.
 
-## Authors
+## Author
 
 * [Mathias Bynens](http://mathiasbynens.be/)
   [![@mathias on Twitter](http://gravatar.com/avatar/24e08a9ea84deb17ae121074d0f17125?s=70)](http://twitter.com/mathias "Follow @mathias on Twitter")

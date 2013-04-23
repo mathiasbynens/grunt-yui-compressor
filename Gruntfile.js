@@ -3,8 +3,13 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		'min': {
 			'dist': {
-				'src': 'examples/example.js',
-				'dest': 'examples/example.min.js'
+				'options': {
+					'report': 'gzip'
+				},
+				'files': [{
+					'src': 'examples/example.js',
+					'dest': 'examples/example.min.js'
+				}]
 			}
 		},
 		'cssmin': {
