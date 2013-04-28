@@ -69,8 +69,9 @@ In lieu of a formal style guide, take care to maintain the existing coding style
 
 ## Author
 
-* [Mathias Bynens](http://mathiasbynens.be/)
-  [![@mathias on Twitter](http://gravatar.com/avatar/24e08a9ea84deb17ae121074d0f17125?s=70)](http://twitter.com/mathias "Follow @mathias on Twitter")
+| [![twitter/mathias](http://gravatar.com/avatar/24e08a9ea84deb17ae121074d0f17125?s=70)](http://twitter.com/mathias "Follow @mathias on Twitter") |
+|---|
+| [Mathias Bynens](http://mathiasbynens.be/) |
 
 ## License
 
