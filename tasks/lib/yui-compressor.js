@@ -27,6 +27,7 @@ exports.init = function(grunt) {
 			'type': 'yui-' + options.type,
 			'fileIn': source,
 			'fileOut': destination,
+			'options': [ options.charset ? '--charset '+options.charset : '' ],
 			'callback': function(error) {
 				if (error) {
 					grunt.warn(error);
