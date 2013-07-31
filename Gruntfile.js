@@ -14,7 +14,7 @@ module.exports = function(grunt) {
 			'charset': {
 				'options': {
 					'report': 'gzip',
-					'charset': 'utf8'
+					'charset': 'utf-8'
 				},
 				'files': [{
 					'src': 'examples/example.utf8.js',
