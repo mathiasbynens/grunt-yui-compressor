@@ -19,6 +19,12 @@ exports.init = function(grunt) {
 		var min;
 		var report = options.report;
 
+		// Ugly hack to create the destination path automatically if needed
+		if(destination !== source) {
+			if(!grunt.file.exists(destination))
+				grunt.file.write(destination, '');
+		}
+
 		// Minify all the things!
 		new Compressor({
 			'type': 'yui-' + options.type,
