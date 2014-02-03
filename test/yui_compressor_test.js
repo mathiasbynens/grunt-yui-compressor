@@ -30,8 +30,8 @@ exports.yui_compressor = {
   min: function (test) {
     test.expect(1);
 
-    var actual = grunt.file.read('tmp/example.min.js');
-    var expected = grunt.file.read('test/expected/example.min.js');
+    var actual = grunt.file.read('tmp/simple.min.js');
+    var expected = grunt.file.read('test/expected/simple.min.js');
     test.equal(actual, expected, 'should minify a JavaScript file correctly.');
 
     test.done();
@@ -39,8 +39,8 @@ exports.yui_compressor = {
   cssmin: function (test) {
     test.expect(1);
 
-    var actual = grunt.file.read('tmp/example.min.css');
-    var expected = grunt.file.read('test/expected/example.min.css');
+    var actual = grunt.file.read('tmp/simple.min.css');
+    var expected = grunt.file.read('test/expected/simple.min.css');
     test.equal(actual, expected, 'should minify a CSS file correctly.');
 
     test.done();

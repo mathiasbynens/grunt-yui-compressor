@@ -14,8 +14,8 @@ module.exports = function(grunt) {
 					'report': 'gzip'
 				},
 				'files': [{
-					'src': 'test/fixtures/example.js',
-					'dest': 'tmp/example.min.js'
+					'src': 'test/fixtures/simple.js',
+					'dest': 'tmp/simple.min.js'
 				}]
 			}
 		},
@@ -25,8 +25,8 @@ module.exports = function(grunt) {
 					'report': false
 				},
 				'files': [{
-					'src': 'test/fixtures/example.css',
-					'dest': 'tmp/example.min.css'
+					'src': 'test/fixtures/simple.css',
+					'dest': 'tmp/simple.min.css'
 				}]
 			}
 		},
