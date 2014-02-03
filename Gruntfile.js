@@ -9,7 +9,7 @@ module.exports = function(grunt) {
 	// Project configuration.
 	grunt.initConfig({
 		'min': {
-			'dist': {
+			'simple': {
 				'options': {
 					'report': 'gzip'
 				},
@@ -17,10 +17,19 @@ module.exports = function(grunt) {
 					'src': 'test/fixtures/simple.js',
 					'dest': 'tmp/simple.min.js'
 				}]
+			},
+			'w_breaks': {
+				'options': {
+					'report': 'gzip'
+				},
+				'files': [{
+					'src': 'test/fixtures/simple.js',
+					'dest': 'tmp/w_breaks.min.js'
+				}]
 			}
 		},
 		'cssmin': {
-			'dist': {
+			'simple': {
 				'options': {
 					'report': false
 				},

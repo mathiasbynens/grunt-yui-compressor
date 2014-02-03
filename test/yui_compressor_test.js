@@ -27,7 +27,7 @@ exports.yui_compressor = {
     // setup here if necessary
     done();
   },
-  min: function (test) {
+  min_simple: function (test) {
     test.expect(1);
 
     var actual = grunt.file.read('tmp/simple.min.js');
@@ -36,7 +36,16 @@ exports.yui_compressor = {
 
     test.done();
   },
-  cssmin: function (test) {
+  min_w_breaks: function (test) {
+    test.expect(1);
+
+    var actual = grunt.file.read('tmp/w_breaks.min.js');
+    var expected = grunt.file.read('test/expected/w_breaks.min.js');
+    test.equal(actual, expected, 'should minify a JavaScript file using the line break option correctly.');
+
+    test.done();
+  },
+  cssmin_simple: function (test) {
     test.expect(1);
 
     var actual = grunt.file.read('tmp/simple.min.css');
