@@ -20,6 +20,7 @@ module.exports = function(grunt) {
 			},
 			'w_breaks': {
 				'options': {
+					'linebreak': 10,
 					'report': 'gzip'
 				},
 				'files': [{
@@ -31,13 +32,24 @@ module.exports = function(grunt) {
 		'cssmin': {
 			'simple': {
 				'options': {
-					'report': false
+					'report': 'gzip'
+					
 				},
 				'files': [{
 					'src': 'test/fixtures/simple.css',
 					'dest': 'tmp/simple.min.css'
 				}]
-			}
+			},
+			'w_breaks': {
+				'options': {
+					'linebreak': 10,
+					'report': 'gzip'
+				},
+				'files': [{
+					'src': 'test/fixtures/simple.css',
+					'dest': 'tmp/w_breaks.min.css'
+				}]
+			}			
 		},
 		// Before generating any new files, remove any previously-created files.
 		'clean': {

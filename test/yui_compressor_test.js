@@ -53,5 +53,14 @@ exports.yui_compressor = {
     test.equal(actual, expected, 'should minify a CSS file correctly.');
 
     test.done();
+  },
+    cssmin_w_breaks: function (test) {
+    test.expect(1);
+
+    var actual = grunt.file.read('tmp/w_breaks.min.css');
+    var expected = grunt.file.read('test/expected/w_breaks.min.css');
+    test.equal(actual, expected, 'should minify a CSS file correctly.');
+
+    test.done();
   }
 };
