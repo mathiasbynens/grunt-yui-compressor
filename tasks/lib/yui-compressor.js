@@ -37,7 +37,7 @@ exports.init = function(grunt) {
 				}
 				min = grunt.file.read(destination);
 				grunt.log.writeln('File `' + destination + '` created.');
-				grunt.log.writeln(maxMin(min, max, report == 'gzip'));
+				grunt.log.writeln(maxMin(max, min, report == 'gzip'));
 				// Let Grunt know the asynchronous task has completed
 				options.fn();
 			}
