@@ -1,10 +1,11 @@
 var Compressor = require('node-minify').minify;
+var maxMin = require('maxmin');
 
 exports.init = function(grunt) {
 
 	// Refactored out the `min_max_info` and `concat` helpers here
 	// because `grunt.helper` is removed in future Grunt versions
-	var minMax = require('grunt-lib-contrib').init(grunt).minMaxInfo;
+	var maxMin = require('maxmin');
 	var concat = function(source) {
 		// Kinda hacky, but that’s how I roll…
 		return source.map(function(filepath) {
@@ -36,7 +37,7 @@ exports.init = function(grunt) {
 				}
 				min = grunt.file.read(destination);
 				grunt.log.writeln('File `' + destination + '` created.');
-				minMax(min, max, report);
+				grunt.log.writeln(maxMin(min, max, report));
 				// Let Grunt know the asynchronous task has completed
 				options.fn();
 			}
