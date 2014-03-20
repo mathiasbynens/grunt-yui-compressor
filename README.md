@@ -1,4 +1,4 @@
-# grunt-yui-compressor [![Dependency status](https://gemnasium.com/mathiasbynens/grunt-yui-compressor.png)](https://gemnasium.com/mathiasbynens/grunt-yui-compressor)
+# grunt-yui-compressor [![Dependency status](https://gemnasium.com/mathiasbynens/grunt-yui-compressor.svg)](https://gemnasium.com/mathiasbynens/grunt-yui-compressor)
 
 A [grunt](https://github.com/cowboy/grunt) plugin for compressing JavaScript and CSS files using YUI Compressor.
 
@@ -69,7 +69,7 @@ In lieu of a formal style guide, take care to maintain the existing coding style
 
 ## Author
 
-| [![twitter/mathias](http://gravatar.com/avatar/24e08a9ea84deb17ae121074d0f17125?s=70)](http://twitter.com/mathias "Follow @mathias on Twitter") |
+| [![twitter/mathias](https://gravatar.com/avatar/24e08a9ea84deb17ae121074d0f17125?s=70)](https://twitter.com/mathias "Follow @mathias on Twitter") |
 |---|
 | [Mathias Bynens](http://mathiasbynens.be/) |
 
