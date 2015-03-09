@@ -1,7 +1,7 @@
 {
 	"name": "grunt-yui-compressor",
 	"description": "A grunt plugin for compressing JavaScript and CSS files using YUI Compressor.",
-	"version": "0.3.3",
+	"version": "0.4.0",
 	"homepage": "https://github.com/mathiasbynens/grunt-yui-compressor",
 	"author": {
 		"name": "Mathias Bynens",
