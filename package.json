@@ -30,14 +30,14 @@
 		"test": "grunt"
 	},
 	"dependencies": {
-		"node-minify": "~0.9.1",
-		"maxmin": "~0.1.0"
+		"node-minify": "^1.0.1",
+		"maxmin": "^1.0.1"
 	},
 	"peerDependencies": {
-		"grunt": "~0.4.1"
+		"grunt": "^0.4.1"
 	},
 	"devDependencies": {
-		"grunt": "~0.4.1"
+		"grunt": "^0.4.1"
 	},
 	"keywords": [
 		"gruntplugin"

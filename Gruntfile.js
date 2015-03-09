@@ -4,7 +4,7 @@ module.exports = function(grunt) {
 		'min': {
 			'dist': {
 				'options': {
-					'report': 'min'
+					'report': 'gzip'
 				},
 				'files': [{
 					'src': 'examples/example.js',

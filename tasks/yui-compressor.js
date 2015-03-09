@@ -8,7 +8,7 @@ module.exports = function(grunt) {
 		var length = files.length;
 		var count = 0;
 		var options = this.options({
-			'report': 'min'
+			'report': 'gzip'
 		});
 		files.forEach(function(file) {
 			yuiCompressor({
