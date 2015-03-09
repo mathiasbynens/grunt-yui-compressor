@@ -20,16 +20,16 @@ Now you can specify CSS/JS files to minify. Here’s a basic example:
 
 ```js
 'min': {
-	'dist': {
-		'src': ['src/foo.js', 'src/bar.js'],
-		'dest': 'build/foobar.min.js'
-	}
+    'dist': {
+        'src': ['src/foo.js', 'src/bar.js'],
+        'dest': 'build/foobar.min.js'
+    }
 },
 'cssmin': {
-	'dist': {
-		'src': ['css/foo.css', 'css/bar.css'],
-		'dest': 'build/foobar.min.css'
-	}
+    'dist': {
+        'src': ['css/foo.css', 'css/bar.css'],
+        'dest': 'build/foobar.min.css'
+    }
 }
 ```
 
@@ -51,7 +51,7 @@ Both these tasks are [multi tasks](https://github.com/gruntjs/grunt/blob/master/
 Grunt’s built-in `min` task relies on UglifyJS. I love UglifyJS, but it has a few annoying issues and shortcomings:
 
 * It strips license comments of the form `/*! foo */`, only preserving the first comment in the concatenated file. This may cause you to violate licenses of open-source libraries that you’re using in your projects.
-* It doesn’t [escape](http://mathiasbynens.be/notes/javascript-escapes) non-printable ASCII characters in the output, potentially leading to hard-to-debug issues. Try minifying `'\x0b'`, for example.
+* It doesn’t [escape](https://mathiasbynens.be/notes/javascript-escapes) non-printable ASCII characters in the output, potentially leading to hard-to-debug issues. Try minifying `'\x0b'`, for example.
 * There’s no way to make UglifyJS not munge a variable name.
 
 YUI Compressor doesn’t have these issues.
@@ -71,8 +71,8 @@ In lieu of a formal style guide, take care to maintain the existing coding style
 
 | [![twitter/mathias](https://gravatar.com/avatar/24e08a9ea84deb17ae121074d0f17125?s=70)](https://twitter.com/mathias "Follow @mathias on Twitter") |
 |---|
-| [Mathias Bynens](http://mathiasbynens.be/) |
+| [Mathias Bynens](https://mathiasbynens.be/) |
 
 ## License
 
-This project is dual licensed under the [MIT](http://mths.be/mit) and [GPL](http://mths.be/gpl) licenses.
+This project is dual licensed under the [MIT](https://mths.be/mit) and [GPL](https://mths.be/gpl) licenses.
