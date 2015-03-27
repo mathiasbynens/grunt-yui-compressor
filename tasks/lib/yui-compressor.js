@@ -15,14 +15,15 @@ exports.init = function(grunt) {
 
 	return function(options) {
 		var source = grunt.file.expand(options.source);
-		var destination = options.destination;
+		var destination = options.destination || source;
 		var max = concat(source);
 		var min;
 		var report = options.report;
 
 		// Ugly hack to create the destination path automatically if needed
-		if (!grunt.file.exists(destination)) {
-			grunt.file.write(destination, '');
+		if(destination !== source) {
+			if(!grunt.file.exists(destination))
+				grunt.file.write(destination, '');
 		}
 
 		// Minify all the things!
