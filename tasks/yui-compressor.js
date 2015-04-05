@@ -20,7 +20,8 @@ module.exports = function(grunt) {
 						done();
 					}
 				},
-				'report': options.report
+				'report': options.report,
+				'charset': options.charset
 			});
 		});
 	});
@@ -43,7 +44,8 @@ module.exports = function(grunt) {
 						done();
 					}
 				},
-				'report': options.report
+				'report': options.report,
+				'charset': options.charset
 			});
 		});
 	});

@@ -10,6 +10,16 @@ module.exports = function(grunt) {
 					'src': 'examples/example.js',
 					'dest': 'examples/example.min.js'
 				}]
+			},
+			'charset': {
+				'options': {
+					'report': 'gzip',
+					'charset': 'utf-8'
+				},
+				'files': [{
+					'src': 'examples/example.utf8.js',
+					'dest': 'examples/example.utf8.min.js'
+				}]
 			}
 		},
 		'cssmin': {
